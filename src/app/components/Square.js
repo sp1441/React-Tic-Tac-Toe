@@ -1,3 +1,5 @@
+"use client";
+
 export default function Square({ value }) {
   function handleClick() {
     console.log('clicked!');
