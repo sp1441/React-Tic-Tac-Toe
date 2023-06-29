@@ -25,7 +25,7 @@ export default function Home() {
     <main className={styles.main}>
       {/* <FilterableProductTable products={PRODUCTS} />
       <FilterableProductTable products={MORE_PRODUCTS} /> */}
-
+      return <button className="square">X</button>;
     </main>
   )
 }
