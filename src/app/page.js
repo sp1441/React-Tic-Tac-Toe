@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import FilterableProductTable from './components/filterableProductTable';
 
+
 const PRODUCTS = [
   { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
   { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
@@ -22,10 +23,20 @@ const MORE_PRODUCTS = [
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <>
       {/* <FilterableProductTable products={PRODUCTS} />
       <FilterableProductTable products={MORE_PRODUCTS} /> */}
-      return <button className="square">X</button>;
-    </main>
+
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+      <button className={"square"}>X</button>
+
+    </>
   )
 }
