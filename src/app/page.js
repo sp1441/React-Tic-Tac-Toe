@@ -1,95 +1,31 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import FilterableProductTable from './components/filterableProductTable';
+
+const PRODUCTS = [
+  { category: "Fruits", price: "$1", stocked: true, name: "Apple" },
+  { category: "Fruits", price: "$1", stocked: true, name: "Dragonfruit" },
+  { category: "Fruits", price: "$2", stocked: false, name: "Passionfruit" },
+  { category: "Vegetables", price: "$2", stocked: true, name: "Spinach" },
+  { category: "Vegetables", price: "$4", stocked: false, name: "Pumpkin" },
+  { category: "Vegetables", price: "$1", stocked: true, name: "Peas" }
+];
+
+const MORE_PRODUCTS = [
+  { category: "Cars", price: "$29999", stocked: true, name: "Toyota" },
+  { category: "Cars", price: "$27999", stocked: true, name: "Tesla" },
+  { category: "Cars", price: "$4000", stocked: true, name: "Ford" },
+  { category: "Trucks", price: "$70000", stocked: true, name: "Ford" },
+  { category: "Trucks", price: "$78800", stocked: true, name: "Tesla" },
+  { category: "Trucks", price: "$56000", stocked: true, name: "Toyota" }
+]
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      {/* <FilterableProductTable products={PRODUCTS} />
+      <FilterableProductTable products={MORE_PRODUCTS} /> */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   )
 }
